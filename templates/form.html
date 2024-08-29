@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Prediksi Diabetes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #00796b;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #00796b;
+        }
+
+        .btn-primary {
+            background-color: #ff5722;
+            border-color: #ff5722;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e64a19;
+            border-color: #e64a19;
+        }
+
+        .form-check-input {
+            border-color: #00796b;
+        }
+
+        .form-check-input:checked {
+            background-color: #00796b;
+            border-color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Prediksi Diabetes</h1>
+        <p class="text-center">Silakan isi data di bawah ini untuk memprediksi kemungkinan terkena diabetes.</p>
+        <form action="/predict" method="POST" class="mt-4">
+            <div class="form-group">
+                <label for="usia">1. Usia (tahun):</label>
+                <input type="number" name="usia" class="form-control" placeholder="Contoh: 25" min="1" max="120" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">2. Indeks Massa Tubuh (BMI):</label>
+                <input type="number" step="0.1" name="bmi" class="form-control" placeholder="Contoh: 18.5 - 40.0" min="10" max="50" required>
+            </div>
+            <div class="form-group">
+                <label for="glucose">3. Kadar Glukosa Darah (mg/dL):</label>
+                <input type="number" name="glucose" class="form-control" placeholder="Contoh: 70 - 200" min="50" max="300" required>
+            </div>
+            <div class="form-group">
+                <label for="blood_pressure">4. Tekanan Darah (mmHg):</label>
+                <input type="number" name="blood_pressure" class="form-control" placeholder="Contoh: 80 - 180" min="50" max="200" required>
+            </div>
+            <div class="form-group">
+                <label for="skin_thickness">5. Ketebalan Kulit (mm):</label>
+                <input type="number" name="skin_thickness" class="form-control" placeholder="Contoh: 10 - 50" min="1" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="pregnancies">6. Jumlah Kehamilan:</label>
+                <input type="number" name="pregnancies" class="form-control" placeholder="Contoh: 0 - 15" min="0" max="20" required>
+            </div>
+            <div class="form-group">
+                <label for="insulin">7. Kadar Insulin (μU/mL):</label>
+                <input type="number" name="insulin" class="form-control" placeholder="Contoh: 15 - 276" min="0" max="900" required>
+            </div>
+            <div class="form-group">
+                <label for="diabetes_pedigree">8. Fungsi Pedigree Diabetes:</label>
+                <input type="number" step="0.01" name="diabetes_pedigree" class="form-control" placeholder="Isi dengan nilai antara 0.2 - 1.5" min="0.1" max="2.5" required>
+            </div>
+            <div class="form-group">
+                <label for="family_history">9. Riwayat Keluarga:</label><br>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="family_history" value="1" class="form-check-input" required> Ya
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="family_history" value="0" class="form-check-input" required> Tidak
+                </div>
+            </div>
+            <input type="submit" value="Prediksi" class="btn btn-primary btn-block mt-4">
+        </form>
+    </div>
+</body>
+</html>

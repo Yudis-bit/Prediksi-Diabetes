@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Prediksi Diabetes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #00796b;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-brand:hover, .nav-link:hover {
+            color: #b2dfdb !important;
+        }
+
+        .jumbotron {
+            background: linear-gradient(135deg, #00796b 0%, #26a69a 100%);
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: #ff5722;
+            border-color: #ff5722;
+        }
+
+        .btn-primary:hover {
+            background-color: #e64a19;
+            border-color: #e64a19;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            color: #00796b;
+            font-weight: bold;
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Prediksi Diabetes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/form">Mulai Prediksi</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-4">Selamat Datang di Aplikasi Prediksi Diabetes</h1>
+            <p class="lead">Aplikasi ini dirancang untuk membantu Anda memperkirakan risiko terkena diabetes berdasarkan data medis yang Anda masukkan.</p>
+            <a href="/form" class="btn btn-primary btn-lg mt-4">Mulai Prediksi</a>
+        </div>
+    </div>
+
+    <!-- Fitur Utama -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Fitur Utama</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Prediksi Risiko</h5>
+                        <p class="card-text">Dengan menggunakan algoritma machine learning, aplikasi ini dapat memprediksi kemungkinan seseorang terkena diabetes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Mudah Digunakan</h5>
+                        <p class="card-text">Hanya dengan mengisi beberapa data, Anda bisa mendapatkan hasil prediksi dalam hitungan detik.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Informasi Berguna</h5>
+                        <p class="card-text">Dapatkan wawasan tentang faktor-faktor yang mempengaruhi risiko diabetes Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cara Penggunaan -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Cara Penggunaan</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Langkah 1</h5>
+                        <p class="card-text">Klik tombol "Mulai Prediksi" di bawah untuk menuju ke formulir pengisian data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Langkah 2</h5>
+                        <p class="card-text">Isi semua data yang diminta dengan benar dan lengkap.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Langkah 3</h5>
+                        <p class="card-text">Klik tombol "Prediksi" untuk melihat hasil prediksi risiko diabetes Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">© 2024 Aplikasi Prediksi Diabetes. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
